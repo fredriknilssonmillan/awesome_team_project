@@ -8,25 +8,24 @@ Beer lovers ultimate search tool
 
 • Team Members
 
-Marcelino Esparza
-Aldo Solano
-Sergio Rodríguez
-Fredrik Nilsson
+- Marcelino Esparza
+- Aldo Solano
+- Sergio Rodríguez
+- Fredrik Nilsson
 
 • Project Description
 
-The user will be able to search for a specific beer category or brand, and will be able to know where that beer is sold. Tha platform will inform the user about nearby restaruants where the beer is sold, how the weather is at that place at specific days, and what are the nearby hotels (to avoid drink and drive).
+The user will be able to search for a specific beer category or brand based on a certain location that could be referenced to the users location by geolocalization or allowing the user to enter it manually. Tha platform will inform the user about nearby restaruants, how the weather is at that place at specific days, and what are the nearby hotels (to avoid drink and drive).
 
 • Sketch of final product
 
-1. Input form to select the beer.
-2. Display of a table with results
-3. Repeat step 1 to filter results until the specific brand is reached
-4. Platform will display all the available info of the beer, an image of the label or the beer
-5. The user selects the specific location (from the list of the locations where the label is sold).
-6. The platform displays the weather forecast for the next days and the nearby restaurants
-7. The user selects a restaurant (if possible, throught yelp, opentable, etc., make a reservation for a specific day)
-8. The page displays the list of nearby hotels to the chosen restaurant (if possible on a map)
+1. Through an API, the platform will be able to geolocalize the location of the user
+2. If the user wants to intorduce manually a location, he could do so
+3. The user should be able to write a beer brand, and the platform should tell if that beer is sold and that locations
+4. In an advenced search, the user should be able to filter by beer category
+5. Platform will display all the available info of the beer, an image of the label or the beer
+6. The platform displays the weather forecast for the next days and the nearby restaurants and nearby hotels to taht location
+7. The platform displays known events in the location
 
 
 • APIs to be used (so far, could change)
@@ -39,15 +38,18 @@ https://rapidapi.com/community/api/open-weather-map?utm_source=google&utm_medium
 https://rapidapi.com/dimashirokov/api/YahooWeatherAPI
 https://www.programmableweb.com/api/weather-channel
 https://rapidapi.com/moocher.io/api/ip-geolocation
+https://rapidapi.com/seatgeek/api/seatgeek
 
 
 • Rough breakdown of tasks
 
-1. Select a beer category, then a class, and finally brand
-2. Once brand is selected, display the destinations where brand is sold
-3. When user selects destination, the platform should display the weather for every day of the week
-4. The platform should display recommended restaurants on the location where the beer is sold
-5. Once the restaurant is selected, the platform should display nearby hotels
+1. INput location (manually or by georeference)
+2. Write a beer lable or in an advanced search select a beer category, then a class, and finally brand
+3. Display only the beers sold at the specific location
+4. The platform should display the weather for every day of the week on that location
+5. The platform should display recommended restaurants on the location (not necessary where beer is sold)
+6. The platform should display hotels in that location
+7. The platform should display events in the location
 
 • Development activities
 
