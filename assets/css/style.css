@@ -1,0 +1,10 @@
+body {
+    background-image: url("../images/bg.png");
+    background-repeat: repeat;
+}
+
+#css_logo {
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 60px;
+    text-shadow: 2px 2px rgb(167, 167, 8);
+}
