@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+body {
+    background-image: url("../images/bg.png");
+    background-repeat: repeat;
+}
+
+#css_logo {
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 75px;
+}
+
+#beericon {
+    cursor: pointer;
+}
+
+#beericon:hover {
+    color: darkkhaki !important;
+}
+
+.css_opticon {
+    font-size: 120px;
+}
+
+.css_optcol:hover {
+    color: darkkhaki !important;
+=======
 body {
     background-image: url("../images/bg.png");
     background-repeat: repeat;
@@ -7,4 +33,5 @@ body {
     font-family: 'Fascinate Inline', cursive;
     font-size: 60px;
     text-shadow: 2px 2px rgb(167, 167, 8);
+>>>>>>> c76127189b1b0af76a76d0b272b69c12698887ba
 }
