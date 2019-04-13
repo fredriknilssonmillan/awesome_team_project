@@ -54,7 +54,7 @@ const apikey = "/?key=9968a2f544553322a8a49f3fb2916c09";
 const apikey2 = "&key=9968a2f544553322a8a49f3fb2916c09";
 
 // Partial for query from BreweryDB API
-var baseURL = "http://sandbox-api.brewerydb.com/v2/";
+var baseURL = "https://sandbox-api.brewerydb.com/v2/";
 
 // Complement portion for random beer query + concatenation + Console LOG
 var randomBeer = "beer/random";
