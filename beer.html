@@ -15,7 +15,8 @@
         width: 450px;
     }
 
-    #wrapper, #navbar {
+    #wrapper,
+    #navbar {
         margin: auto;
         max-width: 600px;
     }
@@ -100,6 +101,59 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw8hFnyQv4weAe34Uhrba3H22o52PYXKc&callback=initMap&libraries=places"
             async defer></script>
         <script>
+            var queryIP = "https://api.ipify.org?format=json";
+            const fixedIP = "154.16.91.131";
+            const apiKeyIP = "at_knMW8P4hXMF72fVn0z8jG2ZnwPsAy";
+            var queryURLGeoIP = "https://geo.ipify.org/api/v1?" + apiKeyIP + "&ipAddress=" + fixedIP + "&=json";
+            console.log(queryURLGeoIP);
+
+            $.ajax({
+                url: queryIP, method: "GET"
+            })
+                .done(function (response) {
+                    console.log("Public IP: " + response.ip);
+                    var currentIP = response.ip;
+                    $(function () {
+                        $.ajax({
+                            url: "https://geo.ipify.org/api/v1",
+                            // dataType: "jsonp",
+                            dataType: "json",
+                            data: { apiKey: apiKeyIP, ipAddress: currentIP },
+                            success: function (data) {
+                                // console.log(JSON.stringify(data, "", 2));
+                                console.log(data);
+                                console.log("City: " + data.location.city);
+                                console.log("Region: " + data.location.region);
+                                console.log("Country: " + data.location.country);
+                                console.log("Latitude: " + data.location.lat);
+                                console.log("Longitude: " + data.location.lng);
+                                console.log("Zip Code: " + data.location.postalCode);
+                            }
+                        });
+                    });
+
+                })
+
+
+            $(function () {
+                $.ajax({
+                    url: "https://geo.ipify.org/api/v1",
+                    // dataType: "jsonp",
+                    dataType: "json",
+                    data: { apiKey: apiKeyIP, ipAddress: fixedIP },
+                    success: function (data) {
+                        // console.log(JSON.stringify(data, "", 2));
+                        console.log(data);
+                        console.log("City: " + data.location.city);
+                        console.log("Region: " + data.location.region);
+                        console.log("Country: " + data.location.country);
+                        console.log("Latitude: " + data.location.lat);
+                        console.log("Longitude: " + data.location.lng);
+                        console.log("Zip Code: " + data.location.postalCode);
+                    }
+                });
+            });
+
             // var map;
             // function initMap() {
             //     map = new google.maps.Map(document.getElementById("map"), {
@@ -270,7 +324,6 @@
                     // $("#content").append("<img src=" + response.data.labels.contentAwareLarge + ">");
 
                 })
-            
 
 
 
