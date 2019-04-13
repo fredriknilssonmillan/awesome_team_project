@@ -10,10 +10,17 @@ body {
 
 #beericon {
     cursor: pointer;
+    color: gray;
 }
 
 #beericon:hover {
-    color: darkkhaki !important;
+    color: white !important;
+}
+
+/* ! container color */
+
+.css_contcolor {
+    background-color: rgb(244, 191, 79);
 }
 
 .css_optcol {
@@ -21,5 +28,5 @@ body {
 }
 
 .css_optcol:hover {
-    color: darkkhaki !important;
+    color: ghostwhite !important;
 }

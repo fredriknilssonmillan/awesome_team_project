@@ -1,5 +1,17 @@
+window.onload = function () {
 
+    // hide the results container
+    $("#resultscontainer").hide();
 
+};
+
+$(".action").click(function () {
+
+    // hide and show containers accordingly
+    $("#searchcontainer").hide();
+    $("#resultscontainer").show(500);
+
+});
 
 // First: Make sure to link jQuery in html file
 
@@ -21,7 +33,6 @@ console.log("queryURLGeoIP: " + queryURLGeoIP);
 // AJAX Function to call the current public IP, and the a second AJAX Function within to call the reverse code from the current IP
 
 $("#current").on("click", currentIPLocation);
-
 
 function currentIPLocation() {
     $.ajax({
@@ -135,15 +146,3 @@ function random() {
                 })
         })
 }
-
-$("#resultscontainer").hide();
-
-$(".action").click(function () {
-
-    $("#searchcontainer").hide();
-    $("#resultscontainer").show(500);
-
-})
-
-
-
