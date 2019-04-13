@@ -13,6 +13,14 @@ $(".action").click(function () {
 
 });
 
+$("#beericon").click(function () {
+
+    // hide and show containers accordingly
+    $("#searchcontainer").show(500);
+    $("#resultscontainer").hide();
+
+});
+
 // First: Make sure to link jQuery in html file
 
 // Query to get current IP from IPIFY API + Console LOG
