@@ -1,5 +1,6 @@
 
 
+
 // First: Make sure to link jQuery in html file
 
 // Query to get current IP from IPIFY API + Console LOG
@@ -134,3 +135,15 @@ function random() {
                 })
         })
 }
+
+$("#resultscontainer").hide();
+
+$(".action").click(function () {
+
+    $("#searchcontainer").hide();
+    $("#resultscontainer").show(500);
+
+})
+
+
+
