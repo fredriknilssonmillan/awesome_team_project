@@ -16,9 +16,10 @@ body {
     color: darkkhaki !important;
 }
 
-.css_option {
-    font-size: 120px;
+.css_optcol {
+    color: rgb(52, 57, 64);
 }
 
 .css_optcol:hover {
     color: darkkhaki !important;
+}
