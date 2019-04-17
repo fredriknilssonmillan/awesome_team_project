@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Single AJAX</title>
+</head>
+
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		// constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+		//var location = prompt("location");
+        var queryURL = "https://api.seatgeek.com/2/events?lat=37.761363&lon=-122.446526&range=30mi&client_id=MTYyMzAxMDZ8MTU1NTM1ODMxNC43Nw";
+        
+        
+
+		$.ajax({
+			url: queryURL,
+			method: "GET"
+		}).then(function (response) {
+			console.log(response);
+			console.log(response.Runtime);
+		});
+        // ---------------------------------------------------------
+        
+        $.ajax({
+			url: "http://api.eventful.com/json/events/search?keywords=location=Denver&app_key=H9jmqW2bSXfd9SJM&t=Next+30+days",
+			method: "GET"
+		}).then(function (response) {
+			console.log(response);
+			console.log(response.Runtime);
+		});
+		// ---------------------------------------------------------
+
+
+
+	</script>
+
+</body>
+
+</html>
