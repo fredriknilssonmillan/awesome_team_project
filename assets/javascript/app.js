@@ -1,5 +1,25 @@
+window.onload = function () {
 
+    // hide the results container
+    $("#resultscontainer").hide();
 
+};
+
+$(".action").click(function () {
+
+    // hide and show containers accordingly
+    $("#searchcontainer").hide();
+    $("#resultscontainer").show(500);
+
+});
+
+$("#beericon").click(function () {
+
+    // hide and show containers accordingly
+    $("#searchcontainer").show(500);
+    $("#resultscontainer").hide();
+
+});
 
 // First: Make sure to link jQuery in html file
 
@@ -237,6 +257,7 @@ function random() {
                 })
         })
 }
+
 
 $("#resultscontainer").hide();
 
