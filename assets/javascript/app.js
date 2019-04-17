@@ -100,9 +100,9 @@ console.log("URL to get ALL Locations: " + baseURL + auxLocations + apikey);
 var queryLocationsURL = baseURL + auxLocations + apikey;
 
 // Calling getLocations function for another location button, with this syntaxis one can add/include more functions to the listening event
-$("#another").on("click", function(event){
+$("#another").on("click", function(event) {
     event.preventDefault();
-    getLocations()
+    getLocations();
 });
 
 
@@ -173,7 +173,7 @@ function getLocations() {
         )}
 
 // Calling random function for random location button, with this syntaxis one can add/include more functions to the listening event
-$("#random").on("click", function(event){
+$("#random").on("click", function(event) {
     event.preventDefault();
     random();
 });
